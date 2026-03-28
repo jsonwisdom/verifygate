@@ -109,12 +109,6 @@
             background: #fff;
             box-shadow: 0 0 20px var(--neon-cyan);
         }
-        .result-box {
-            display: none;
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 2px solid var(--neon-cyan);
-        }
         .paypal-btn {
             background: #fff !important;
             color: #000 !important;
@@ -151,15 +145,18 @@
     <textarea id="inputData" placeholder="PASTE JSON OR AI OUTPUT FOR FINGERPRINTING..."></textarea>
     <button class="btn-primary" onclick="generateHash()">GENERATE SHA-256 FINGERPRINT</button>
 
-    <div id="resultBox" class="result-box">
+    <div id="resultBox" class="result-box" style="display: none;">
         <div class="section-label">02 // VERIFICATION_RESULT</div>
         <p><strong>HASH:</strong> <span id="hashOutput" style="word-break: break-all; color: #fff;"></span></p>
         <p><strong>STATUS:</strong> <span style="color: var(--glitch-pink);">T1_UNSETTLED (CLIENT_SIDE)</span></p>
 
-        <button class="btn-primary paypal-btn" onclick="window.location.href='https://paypal.me/jaywisdom44@gmail.com/5'">COMMIT TO LEDGER ($5)</button>
+        <!-- YOUR REAL PAYPAL BUTTON -->
+        <button class="btn-primary paypal-btn" onclick="window.location.href='https://paypal.me/jaywisdom44@gmail.com/5'">
+            COMMIT TO LEDGER ($5)
+        </button>
         
         <p style="font-size: 0.8rem; margin-top: 15px; opacity: 0.8;">
-            Upgrade this hash to T2 Attested Receipt for $5
+            Upgrade this hash to a T2 Attested Receipt for $5
         </p>
     </div>
 
