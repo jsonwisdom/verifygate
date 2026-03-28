@@ -94,6 +94,7 @@
             cursor: pointer;
             width: 100%;
             transition: 0.2s;
+            margin-top: 8px;
         }
         .btn-primary:hover { background: #fff; box-shadow: 0 0 15px var(--neon-cyan); }
         .result-box {
@@ -122,7 +123,6 @@
         <div class="glitch-text">VERIFYGATE</div>
         <div style="font-size: 0.7rem;">NODE: jaywisdom.base // STATUS: SETTLED</div>
     </header>
-
     <div class="section-label">00 // ROOT_OF_TRUST</div>
     <div style="position: relative;">
         <pre id="genesisReceipt">{
@@ -134,18 +134,16 @@
 }</pre>
         <button class="copy-btn" onclick="copyReceipt()">COPY_JSON</button>
     </div>
-
     <div style="margin-top: 30px;">
         <div class="section-label">01 // MANIFEST_INPUT</div>
         <textarea id="inputData" placeholder="PASTE JSON OR AI OUTPUT FOR FINGERPRINTING..."></textarea>
         <button class="btn-primary" onclick="generateHash()">GENERATE SHA-256 FINGERPRINT</button>
     </div>
-
     <div id="resultBox" class="result-box">
         <div class="section-label">02 // VERIFICATION_RESULT</div>
         <p><strong>HASH:</strong> <span id="hashOutput" style="word-break: break-all; color: #fff;"></span></p>
         <p><strong>STATUS:</strong> <span style="color: var(--glitch-pink);">T1_UNSETTLED (CLIENT_SIDE)</span></p>
-       
+      
         <details>
             <summary>VIEW SETTLEMENT TIERS</summary>
             <ul class="tier-list">
@@ -156,31 +154,27 @@
             </ul>
         </details>
         <p style="font-size: 0.8rem; margin-top: 15px;">To upgrade to a T2 Attested Receipt ($5), commit this hash to the ledger.</p>
-        
-        <!-- REPLACE THE LINE BELOW WITH YOUR REAL PAYPAL LINK -->
+       
         <button class="btn-primary" style="background: #fff;" onclick="window.location.href='https://paypal.me/jaywisdom44@gmail.com/5'">COMMIT TO LEDGER ($5)</button>
     </div>
-
     <footer>
         [STATE0] // RECEIPTS OVER NARRATION // (C) 2026 JAY WISDOM
     </footer>
 </div>
-
 <script>
     async function generateHash() {
         const text = document.getElementById('inputData').value.trim();
         if (!text) return alert("Input required.");
-        
+       
         const encoder = new TextEncoder();
         const data = encoder.encode(text);
         const hashBuffer = await crypto.subtle.digest('SHA-256', data);
         const hashArray = Array.from(new Uint8Array(hashBuffer));
         const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-        
+       
         document.getElementById('hashOutput').innerText = hashHex;
         document.getElementById('resultBox').style.display = 'block';
     }
-
     function copyReceipt() {
         const text = document.getElementById('genesisReceipt').innerText;
         navigator.clipboard.writeText(text).then(() => {
