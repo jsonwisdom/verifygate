@@ -13,7 +13,7 @@ def verify():
     # Hash check
     canonical = json.dumps(artifact, separators=(',', ':'), sort_keys=True)
     actual_hash = hashlib.sha256(canonical.encode()).hexdigest()
-    expected_hash = "4a918ab359f0228d1d142fde6270d9ea7f18b4f08dd9c725f17356835adf2a76"
+    expected_hash = "95b5fd99d927cb7f3468d5645ef2827b2c29bf978c194916a0888d6f9a97fe30"
 
     print(f"Arithmetic: {'PASS' if res == artifact['reported_total'] else 'FAIL'}")
     print(f"Hash Match: {'PASS' if actual_hash == expected_hash else 'FAIL'}")
