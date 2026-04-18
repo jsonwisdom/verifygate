@@ -1,0 +1,14 @@
+{
+  "source": "MMB February 2026 Forecast - Presentation Page 4",
+  "unit": "USD millions",
+  "inputs": {
+    "beginning_balance": 10273,
+    "total_revenue": 67464,
+    "total_spending": 70231,
+    "reserves": 3772
+  },
+  "reported_total": 3734,
+  "computed_total": 3734,
+  "status": "PASS",
+  "method": "((10273 + 67464) - (70231 + 3772))"
+}
