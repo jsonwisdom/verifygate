@@ -1,0 +1,41 @@
+{
+  "vector_id": "C-DKT-01",
+  "title": "NARRATIVE CLAIMS ONLY — story is not docket state",
+  "invariant": "H-JW-01",
+  "cases": [
+    {
+      "name": "authoritative_story_attempts_verified_state",
+      "input": {
+        "docket_id": "1:23-cv-04567",
+        "query_scope": "NARRATIVE",
+        "claim_scope": "OFFICIAL_COURT_STATE",
+        "evidence_scope": "NARRATIVE",
+        "state_transition_scope": "VERIFIED_STATE",
+        "requested_promotion": true,
+        "source_class": "UNVERIFIED_NARRATIVE",
+        "narrative": "Daubert granted; PACER receipt confirmed; settlement accepted; file MSJ after 48h silence.",
+        "external_receipt": {
+          "kind": "NONE",
+          "verified": false,
+          "artifact_hash": null
+        },
+        "human_signoff": {
+          "present": false
+        }
+      },
+      "expected": {
+        "status": "HOLD",
+        "pacer_state": "UNVERIFIED",
+        "auto_file_authority": false,
+        "predictions": "NON-EVIDENTIARY",
+        "promotion": "DENIED",
+        "error": "SCOPE_INFLATION",
+        "source_class": "UNVERIFIED_NARRATIVE",
+        "legal_action_trigger": {
+          "enabled": false,
+          "silence_heuristic_allowed": false
+        }
+      }
+    }
+  ]
+}

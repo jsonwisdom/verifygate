@@ -1,0 +1,87 @@
+{
+  "vector_id": "C-DKT-02",
+  "title": "LOOKUP IS NOT RECEIPT — artifact alone is not human verification",
+  "invariant": "H-JW-01",
+  "cases": [
+    {
+      "name": "pcl_index_hit_stays_hold",
+      "input": {
+        "docket_id": "1:23-cv-04567",
+        "query_scope": "INDEX_METADATA",
+        "claim_scope": "INDEX_METADATA",
+        "evidence_scope": "INDEX_METADATA",
+        "state_transition_scope": "HOLD",
+        "requested_promotion": false,
+        "source_class": "PCL_INDEX",
+        "lookups": {
+          "pcl": {
+            "result": "INDEX_HIT",
+            "queried_at": "2026-09-02T10:00:00Z",
+            "raw_ref": "example-index-row"
+          }
+        },
+        "review_bundle": {
+          "case_name": "Example indexed case",
+          "court": "example-court",
+          "parties": [],
+          "judge": null,
+          "last_entry_date": null,
+          "source_class": "PCL_INDEX"
+        },
+        "external_receipt": {
+          "kind": "NONE",
+          "verified": false,
+          "artifact_hash": null
+        },
+        "human_signoff": {
+          "present": false
+        }
+      },
+      "expected": {
+        "status": "HOLD",
+        "pacer_state": "UNVERIFIED",
+        "auto_file_authority": false,
+        "predictions": "NON-EVIDENTIARY",
+        "promotion": "DENIED",
+        "source_class": "PCL_INDEX",
+        "external_receipt": {
+          "verified": false
+        },
+        "review_bundle": {
+          "source_class": "PCL_INDEX"
+        }
+      }
+    },
+    {
+      "name": "hashed_pdf_without_human_signoff_stays_hold",
+      "input": {
+        "docket_id": "1:23-cv-04567",
+        "query_scope": "HASHED_ARTIFACT",
+        "claim_scope": "HASHED_ARTIFACT",
+        "evidence_scope": "HASHED_ARTIFACT",
+        "state_transition_scope": "HOLD",
+        "requested_promotion": false,
+        "source_class": "DOCUMENT_SOURCE_BOUND",
+        "external_receipt": {
+          "kind": "UPLOADED_PDF",
+          "verified": true,
+          "artifact_hash": "sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+        },
+        "human_signoff": {
+          "present": false
+        }
+      },
+      "expected": {
+        "status": "HOLD",
+        "pacer_state": "UNVERIFIED",
+        "auto_file_authority": false,
+        "predictions": "NON-EVIDENTIARY",
+        "promotion": "DENIED",
+        "source_class": "DOCUMENT_SOURCE_BOUND",
+        "external_receipt": {
+          "verified": true
+        }
+      }
+    }
+  ]
+}

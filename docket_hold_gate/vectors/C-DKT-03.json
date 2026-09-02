@@ -1,0 +1,66 @@
+{
+  "vector_id": "C-DKT-03",
+  "title": "SCOPE INFLATION — stronger state than query or evidence",
+  "invariant": "H-JW-01",
+  "cases": [
+    {
+      "name": "index_hit_promoted_to_verified",
+      "input": {
+        "docket_id": "1:23-cv-04567",
+        "query_scope": "INDEX_METADATA",
+        "claim_scope": "OFFICIAL_COURT_STATE",
+        "evidence_scope": "INDEX_METADATA",
+        "state_transition_scope": "VERIFIED_STATE",
+        "requested_promotion": true,
+        "source_class": "PCL_INDEX",
+        "lookups": {
+          "pcl": {
+            "result": "INDEX_HIT"
+          }
+        },
+        "external_receipt": {
+          "kind": "NONE",
+          "verified": false,
+          "artifact_hash": null
+        },
+        "human_signoff": {
+          "present": false
+        }
+      },
+      "expected": {
+        "status": "HOLD",
+        "pacer_state": "UNVERIFIED",
+        "auto_file_authority": false,
+        "promotion": "DENIED",
+        "error": "SCOPE_INFLATION"
+      }
+    },
+    {
+      "name": "hashed_artifact_without_signoff_promoted_to_verified",
+      "input": {
+        "docket_id": "1:23-cv-04567",
+        "query_scope": "HASHED_ARTIFACT",
+        "claim_scope": "HASHED_ARTIFACT",
+        "evidence_scope": "HASHED_ARTIFACT",
+        "state_transition_scope": "VERIFIED_STATE",
+        "requested_promotion": true,
+        "source_class": "DOCUMENT_SOURCE_BOUND",
+        "external_receipt": {
+          "kind": "UPLOADED_PDF",
+          "verified": true,
+          "artifact_hash": "sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+        },
+        "human_signoff": {
+          "present": false
+        }
+      },
+      "expected": {
+        "status": "HOLD",
+        "pacer_state": "UNVERIFIED",
+        "auto_file_authority": false,
+        "promotion": "DENIED",
+        "error": "SCOPE_INFLATION"
+      }
+    }
+  ]
+}

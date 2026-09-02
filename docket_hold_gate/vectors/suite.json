@@ -1,0 +1,14 @@
+{
+  "suite_id": "docket-hold-gate-v1",
+  "invariant": "H-JW-01",
+  "vectors": [
+    "C-DKT-01.json",
+    "C-DKT-02.json",
+    "C-DKT-03.json"
+  ],
+  "locked_expectations": {
+    "auto_file_authority": false,
+    "predictions": "NON-EVIDENTIARY",
+    "silence_heuristic_allowed": false
+  }
+}
