@@ -1,0 +1,43 @@
+name: FC-2 adversarial parser SEED (no deploy)
+on:
+  pull_request:
+    paths:
+      - 'tests/test_fc2_python_seed.py'
+      - 'fixtures/fc2_hostile_bytes_v1.json'
+      - 'scripts/check_fc2_corpus_seed.py'
+      - 'scripts/reconcile_fc2_windows.py'
+      - 'docs/FC2_ADVERSARIAL_SEED.md'
+      - '.github/workflows/fc2-seed.yml'
+  push:
+    branches:
+      - 'test/fc2-adversarial-parser-20261026'
+    paths:
+      - 'tests/test_fc2_python_seed.py'
+      - 'docs/FC2_ADVERSARIAL_SEED.md'
+      - '.github/workflows/fc2-seed.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  python-policy-seed:
+    name: Python parser policy seed only — FC-2 HOLD
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Run offline Python byte-parser seed
+        run: python3 -m unittest discover -s tests -p 'test_fc2_python_seed.py' -v
+      - name: Validate fixed hostile-byte corpus against Python seed
+        run: python3 scripts/check_fc2_corpus_seed.py
+      - name: Ensure Windows reconciliation fails closed with no receipt
+        shell: bash
+        run: |
+          if python3 scripts/reconcile_fc2_windows.py; then
+            echo 'HOLD: missing-receipt test unexpectedly passed'
+            exit 1
+          fi
+          test ! -f fc2_combined_scoped_receipt.json
+      - name: Explicit scope marker
+        run: echo 'FC2_SEED_ONLY_PASS — FC2_GATE_HOLD — X402_LIVE_HOLD — PRODUCTION_HOLD'

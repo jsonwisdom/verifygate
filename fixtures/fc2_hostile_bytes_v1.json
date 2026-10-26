@@ -1,0 +1,23 @@
+{
+  "schema": "fc2-hostile-bytes-seed-v1",
+  "scope": "Parser input-boundary rejection/acceptance; NOT RFC8785 certification",
+  "require_independent_expectation": true,
+  "cases": [
+    {"id":"FC2-A01","hex":"7b226f6b223a747275657d","expect":"accept","reason":"simple UTF-8 object"},
+    {"id":"FC2-A02","hex":"7b2278223a22c3a9227d","expect":"accept","reason":"valid UTF-8"},
+    {"id":"FC2-A03","hex":"7b2278223a225c75643833645c7564653030227d","expect":"accept","reason":"valid paired surrogate escapes"},
+    {"id":"FC2-R01","hex":"ff","expect":"reject","reason":"illegal UTF-8 lead"},
+    {"id":"FC2-R02","hex":"7b2278223a22c0af227d","expect":"reject","reason":"overlong UTF-8"},
+    {"id":"FC2-R03","hex":"7b2278223a22eda080227d","expect":"reject","reason":"UTF-8 encoded surrogate"},
+    {"id":"FC2-R04","hex":"7b2278223a22f09f98227d","expect":"reject","reason":"truncated UTF-8"},
+    {"id":"FC2-R05","hex":"7b2278223a312c2278223a327d","expect":"reject","reason":"duplicate object key"},
+    {"id":"FC2-R06","hex":"7b2278223a4e614e7d","expect":"reject","reason":"NaN"},
+    {"id":"FC2-R07","hex":"7b2278223a496e66696e6974797d","expect":"reject","reason":"Infinity"},
+    {"id":"FC2-R08","hex":"7b2278223a317d7b7d","expect":"reject","reason":"trailing document"},
+    {"id":"FC2-R09","hex":"7b2278223a312c7d","expect":"reject","reason":"trailing comma"},
+    {"id":"FC2-R10","hex":"7b2278223a225c7564383030227d","expect":"reject","reason":"lone high surrogate"},
+    {"id":"FC2-R11","hex":"7b2278223a225c7564633030227d","expect":"reject","reason":"lone low surrogate"},
+    {"id":"FC2-R12","hex":"7b225c7564383030223a317d","expect":"reject","reason":"lone surrogate in key"},
+    {"id":"FC2-R13","hex":"7b2278223a","expect":"reject","reason":"truncated JSON"}
+  ]
+}
