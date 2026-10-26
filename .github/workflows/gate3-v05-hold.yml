@@ -1,0 +1,29 @@
+name: Gate 3 v0.5 fail-closed missing-corpus negative test
+on:
+  pull_request:
+    paths:
+      - 'scripts/run_gate3_v05.py'
+      - 'tests/test_gate3_v05_harness_controls.py'
+      - 'docs/GATE3_V05_RUNNER_SCOPE.md'
+      - '.github/workflows/gate3-v05-hold.yml'
+  push:
+    branches: ['test/gate3-v05-failclosed-runner-20261026']
+permissions:
+  contents: read
+jobs:
+  negative-control:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Synthetic harness negative-control suite (NOT original corpus)
+        run: python3 -m unittest discover -s tests -p 'test_gate3_v05_harness_controls.py' -v
+      - name: Corpus absent must return nonzero and never create a receipt
+        run: |
+          set -eu
+          if python3 scripts/run_gate3_v05.py --corpus /tmp/nonexistent-gate3-v05.json --corpus-sha256 0000000000000000000000000000000000000000000000000000000000000000 --python 'python3 fake.py' --javascript 'node fake.js' --go './fake-go' --receipt /tmp/missing-corpus-receipt.json; then
+            echo 'CRITICAL: FAIL-OPEN'; exit 1
+          fi
+          test ! -e /tmp/missing-corpus-receipt.json
+          echo 'GATE3_MISSING_CORPUS_HOLD_VERIFIED'
