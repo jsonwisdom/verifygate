@@ -23,7 +23,7 @@ def classify(command, payload, timeout=2):
             record=json.loads(stderr)
             valid=(isinstance(record,dict) and set(record)==set(REJECTION_SCHEMA) and
                    record["schema"]=="jcs-rejection-v1" and record["code"]==code and
-                   isinstance(record["reason"],str) and bool(re.fullmatch("[A-Z_]{3,40}",record["reason"])))
+                   isinstance(record["reason"],str) and bool(re.fullmatch("[A-Z0-9_]{3,40}",record["reason"])))
         except (ValueError,TypeError):pass
     if signal or bad or (code!=0 and not valid) or (code==0 and bool(r.stderr)):
         outcome="CRASH_UNKNOWN"
