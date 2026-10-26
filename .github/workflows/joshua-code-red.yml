@@ -1,0 +1,28 @@
+name: JOSHUA Code Red — offline only
+on:
+  pull_request:
+    paths:
+      - 'tests/joshua_code_red_offline.py'
+      - 'docs/wallet/JOSHUA_CODE_RED_MANUAL_V1.md'
+      - '.github/workflows/joshua-code-red.yml'
+  push:
+    branches:
+      - 'test/joshua-code-red-offline-20261026'
+permissions:
+  contents: read
+jobs:
+  code-red:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Offline model and deterministic receipt
+        shell: bash
+        run: |
+          python3 tests/joshua_code_red_offline.py | tee code_red_stdout.txt
+          grep -Fx "JOSHUA_CODE_RED_OFFLINE_PASS 30 / 30" code_red_stdout.txt
+          grep -Fx "NEGATIVE_CONTROLS_PASS 2" code_red_stdout.txt
+          grep -Fx "EXECUTION_HOLD" code_red_stdout.txt
+          grep -E '^MANIFEST_SHA256 [a-f0-9]{64}$' code_red_stdout.txt
