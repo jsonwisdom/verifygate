@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - 'scripts/run_gate3_v05.py'
+      - 'tests/test_gate3_v05_harness_controls.py'
       - 'docs/GATE3_V05_RUNNER_SCOPE.md'
       - '.github/workflows/gate3-v05-hold.yml'
   push:
@@ -16,6 +17,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Synthetic harness negative-control suite (NOT original corpus)
+        run: python3 -m unittest discover -s tests -p 'test_gate3_v05_harness_controls.py' -v
       - name: Corpus absent must return nonzero and never create a receipt
         run: |
           set -eu
