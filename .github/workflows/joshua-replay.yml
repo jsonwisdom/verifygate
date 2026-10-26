@@ -1,0 +1,23 @@
+name: JOSHUA offline wallet replay (no chain)
+on:
+  pull_request:
+    paths:
+      - 'tests/joshua_norad_wallet_replay.py'
+      - 'docs/wallet/JOSHUA_NORAD_REPLAY_V0.md'
+      - '.github/workflows/joshua-replay.yml'
+  push:
+    branches:
+      - 'lab/joshua-norad-wallet-replay-20261026'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-replay:
+    name: Policy simulation only
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: python3 tests/joshua_norad_wallet_replay.py
