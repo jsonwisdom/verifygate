@@ -1,0 +1,37 @@
+name: FC-1 evidence integrity (no deploy)
+
+on:
+  pull_request:
+    paths:
+      - 'evidence/fc1-20261026/**'
+      - 'scripts/verify_fc1_evidence.py'
+      - '.github/workflows/fc1-evidence.yml'
+  push:
+    branches:
+      - 'evidence/fc1-windows-20261026'
+    paths:
+      - 'evidence/fc1-20261026/**'
+      - 'scripts/verify_fc1_evidence.py'
+      - '.github/workflows/fc1-evidence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fc1-evidence-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pinned-evidence:
+    name: Check frozen hashes and recorded 60 results
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout PR commit, no credentials persisted
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify local evidence offline with Python standard library
+        shell: bash
+        run: python3 scripts/verify_fc1_evidence.py
