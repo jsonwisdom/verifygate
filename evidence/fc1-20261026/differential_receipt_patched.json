@@ -1,0 +1,1584 @@
+{
+  "adapter_commands": {
+    "go": [
+      "C:/Users/jsonw/FC1-AUDIT/gate/canon_go.exe"
+    ],
+    "js": [
+      "node",
+      "canon_js_fixed.js"
+    ]
+  },
+  "failed_ids": [],
+  "fixtures_sha256": "51907e95c967f847de38921727b484e144333fc9647bd925160f91b7c8ac07ae",
+  "gate": "PASS_FC1_SCOPE_ONLY",
+  "generated_utc": "2026-10-26T17:21:40.841056+00:00",
+  "passed": 60,
+  "python_version": "3.13.14",
+  "results": [
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2278223a225c75303030305c625c745c6e5c665c725c7530303166227d",
+      "id": "VEC-CANON-0001",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a225c75303030305c625c745c6e5c665c725c7530303166227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a225c75303030305c625c745c6e5c665c725c7530303166227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a225c75303030305c625c745c6e5c665c725c7530303166227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303030227d",
+      "id": "C1-00",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303030227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303030227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303030227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303031227d",
+      "id": "C1-01",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303031227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303031227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303031227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303032227d",
+      "id": "C1-02",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303032227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303032227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303032227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303033227d",
+      "id": "C1-03",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303033227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303033227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303033227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303034227d",
+      "id": "C1-04",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303034227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303034227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303034227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303035227d",
+      "id": "C1-05",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303035227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303035227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303035227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303036227d",
+      "id": "C1-06",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303036227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303036227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303036227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303037227d",
+      "id": "C1-07",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303037227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303037227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303037227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c62227d",
+      "id": "C1-08",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c62227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c62227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c62227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c74227d",
+      "id": "C1-09",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c74227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c74227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c74227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c6e227d",
+      "id": "C1-10",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c6e227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c6e227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c6e227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303062227d",
+      "id": "C1-11",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303062227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303062227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303062227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c66227d",
+      "id": "C1-12",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c66227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c66227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c66227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c72227d",
+      "id": "C1-13",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c72227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c72227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c72227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303065227d",
+      "id": "C1-14",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303065227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303065227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303065227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303066227d",
+      "id": "C1-15",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303066227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303066227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303066227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303130227d",
+      "id": "C1-16",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303130227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303130227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303130227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303131227d",
+      "id": "C1-17",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303131227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303131227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303131227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303132227d",
+      "id": "C1-18",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303132227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303132227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303132227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303133227d",
+      "id": "C1-19",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303133227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303133227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303133227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303134227d",
+      "id": "C1-20",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303134227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303134227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303134227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303135227d",
+      "id": "C1-21",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303135227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303135227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303135227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303136227d",
+      "id": "C1-22",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303136227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303136227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303136227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303137227d",
+      "id": "C1-23",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303137227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303137227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303137227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303138227d",
+      "id": "C1-24",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303138227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303138227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303138227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303139227d",
+      "id": "C1-25",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303139227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303139227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303139227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303161227d",
+      "id": "C1-26",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303161227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303161227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303161227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303162227d",
+      "id": "C1-27",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303162227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303162227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303162227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303163227d",
+      "id": "C1-28",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303163227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303163227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303163227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303164227d",
+      "id": "C1-29",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303164227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303164227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303164227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303165227d",
+      "id": "C1-30",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303165227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303165227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303165227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2276223a225c7530303166227d",
+      "id": "C1-31",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303166227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303166227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2276223a225c7530303166227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2278223a22f09f9880227d",
+      "id": "C2-01",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a22f09f9880227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a22f09f9880227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a22f09f9880227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2278223a22c3a9227d",
+      "id": "C2-02",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a22c3a9227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a22c3a9227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a22c3a9227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2278223a2265cc81227d",
+      "id": "C2-03",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a2265cc81227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a2265cc81227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a2265cc81227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "reject",
+      "expected_hex": null,
+      "id": "C2-04",
+      "implementations": {
+        "go": {
+          "accepted": false,
+          "error": "Missing surrogate\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "js": {
+          "accepted": false,
+          "error": "Error: Lone surrogate is not allowed\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "reference": {
+          "accepted": false,
+          "error": "CanonicalizationError: input contains non-UTF-8 codepoints",
+          "exit": 1,
+          "output_hex": ""
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "reject",
+      "expected_hex": null,
+      "id": "C2-05",
+      "implementations": {
+        "go": {
+          "accepted": false,
+          "error": "Missing surrogate\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "js": {
+          "accepted": false,
+          "error": "Error: Lone surrogate is not allowed\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "reference": {
+          "accepted": false,
+          "error": "CanonicalizationError: input contains non-UTF-8 codepoints",
+          "exit": 1,
+          "output_hex": ""
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "reject",
+      "expected_hex": null,
+      "id": "C2-06",
+      "implementations": {
+        "go": {
+          "accepted": false,
+          "error": "Invalid surrogate pair\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "js": {
+          "accepted": false,
+          "error": "Error: Lone surrogate is not allowed\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "reference": {
+          "accepted": false,
+          "error": "CanonicalizationError: input contains non-UTF-8 codepoints",
+          "exit": 1,
+          "output_hex": ""
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2261223a312c2262223a327d",
+      "id": "C3-01",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2261223a312c2262223a327d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2261223a312c2262223a327d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2261223a312c2262223a327d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b22f09f9880223a322c22ee8080223a317d",
+      "id": "C3-02",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b22f09f9880223a322c22ee8080223a317d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b22f09f9880223a322c22ee8080223a317d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b22f09f9880223a322c22ee8080223a317d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2261223a322c22615c6e62223a317d",
+      "id": "C3-03",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2261223a322c22615c6e62223a317d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2261223a322c22615c6e62223a317d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2261223a322c22615c6e62223a317d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b227a223a5b747275652c6e756c6c2c66616c73655d7d",
+      "id": "C4-01",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b227a223a5b747275652c6e756c6c2c66616c73655d7d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b227a223a5b747275652c6e756c6c2c66616c73655d7d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b227a223a5b747275652c6e756c6c2c66616c73655d7d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2278223a22612f62227d",
+      "id": "C4-02",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a22612f62227d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a22612f62227d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a22612f62227d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2261223a7b7d2c227a223a7b2261223a5b332c322c315d2c2262223a307d7d",
+      "id": "C4-03",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2261223a7b7d2c227a223a7b2261223a5b332c322c315d2c2262223a307d7d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2261223a7b7d2c227a223a7b2261223a5b332c322c315d2c2262223a307d7d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2261223a7b7d2c227a223a7b2261223a5b332c322c315d2c2262223a307d7d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2278223a307d",
+      "id": "C5-01",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a307d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a307d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a307d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2278223a317d",
+      "id": "C5-02",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a317d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a317d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a317d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2278223a317d",
+      "id": "C5-03",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a317d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a317d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a317d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2278223a31652d377d",
+      "id": "C5-04",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a31652d377d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a31652d377d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a31652d377d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2278223a302e3030303030317d",
+      "id": "C5-05",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a302e3030303030317d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a302e3030303030317d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a302e3030303030317d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2278223a31652b32317d",
+      "id": "C5-06",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a31652b32317d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a31652b32317d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a31652b32317d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2278223a393030373139393235343734303939317d",
+      "id": "C5-07",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a393030373139393235343734303939317d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a393030373139393235343734303939317d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a393030373139393235343734303939317d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "canonical",
+      "expected_hex": "7b2278223a3333333333333333332e333333333333337d",
+      "id": "C5-08",
+      "implementations": {
+        "go": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a3333333333333333332e333333333333337d"
+        },
+        "js": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a3333333333333333332e333333333333337d"
+        },
+        "reference": {
+          "accepted": true,
+          "error": "",
+          "exit": 0,
+          "output_hex": "7b2278223a3333333333333333332e333333333333337d"
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "reject",
+      "expected_hex": null,
+      "id": "R-01",
+      "implementations": {
+        "go": {
+          "accepted": false,
+          "error": "duplicate key\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "js": {
+          "accepted": false,
+          "error": "Error: duplicate key: x\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "reference": {
+          "accepted": false,
+          "error": "ValueError: duplicate key",
+          "exit": 1,
+          "output_hex": ""
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "reject",
+      "expected_hex": null,
+      "id": "R-02",
+      "implementations": {
+        "go": {
+          "accepted": false,
+          "error": "invalid JSON\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "js": {
+          "accepted": false,
+          "error": "Error: invalid value\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "reference": {
+          "accepted": false,
+          "error": "ValueError: NaN",
+          "exit": 1,
+          "output_hex": ""
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "reject",
+      "expected_hex": null,
+      "id": "R-03",
+      "implementations": {
+        "go": {
+          "accepted": false,
+          "error": "invalid JSON\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "js": {
+          "accepted": false,
+          "error": "Error: invalid value\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "reference": {
+          "accepted": false,
+          "error": "ValueError: Infinity",
+          "exit": 1,
+          "output_hex": ""
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "reject",
+      "expected_hex": null,
+      "id": "R-04",
+      "implementations": {
+        "go": {
+          "accepted": false,
+          "error": "invalid JSON\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "js": {
+          "accepted": false,
+          "error": "Error: expected comma\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "reference": {
+          "accepted": false,
+          "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 7 (char 6)",
+          "exit": 1,
+          "output_hex": ""
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "reject",
+      "expected_hex": null,
+      "id": "R-05",
+      "implementations": {
+        "go": {
+          "accepted": false,
+          "error": "invalid JSON\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "js": {
+          "accepted": false,
+          "error": "Error: expected key\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "reference": {
+          "accepted": false,
+          "error": "JSONDecodeError: Illegal trailing comma before end of object: line 1 column 7 (char 6)",
+          "exit": 1,
+          "output_hex": ""
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "reject",
+      "expected_hex": null,
+      "id": "R-06",
+      "implementations": {
+        "go": {
+          "accepted": false,
+          "error": "invalid JSON\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "js": {
+          "accepted": false,
+          "error": "Error: trailing data\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "reference": {
+          "accepted": false,
+          "error": "JSONDecodeError: Extra data: line 1 column 9 (char 8)",
+          "exit": 1,
+          "output_hex": ""
+        }
+      },
+      "pass": true
+    },
+    {
+      "expect": "reject",
+      "expected_hex": null,
+      "id": "R-07",
+      "implementations": {
+        "go": {
+          "accepted": false,
+          "error": "invalid JSON\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "js": {
+          "accepted": false,
+          "error": "Error: truncated string\n",
+          "exit": 1,
+          "output_hex": ""
+        },
+        "reference": {
+          "accepted": false,
+          "error": "JSONDecodeError: Unterminated string starting at: line 1 column 6 (char 5)",
+          "exit": 1,
+          "output_hex": ""
+        }
+      },
+      "pass": true
+    }
+  ],
+  "rfc8785_version": "0.1.4",
+  "runner_sha256": "55a9dc569725348ef67dcd9a0e161bcdf73ceea4fbf4ae5ed26c79026be36cef",
+  "schema": "fc1-gate-candidate-1",
+  "scope_limit": "FC-1 has no expected rejection classes; RFC package test-suite cross-check is separate and NOT established by this runner.",
+  "total": 60
+}
