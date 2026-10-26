@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - 'tests/test_fc2_python_seed.py'
+      - 'fixtures/fc2_hostile_bytes_v1.json'
+      - 'scripts/check_fc2_corpus_seed.py'
       - 'docs/FC2_ADVERSARIAL_SEED.md'
       - '.github/workflows/fc2-seed.yml'
   push:
@@ -26,5 +28,7 @@ jobs:
           persist-credentials: false
       - name: Run offline Python byte-parser seed
         run: python3 -m unittest discover -s tests -p 'test_fc2_python_seed.py' -v
+      - name: Validate fixed hostile-byte corpus against Python seed
+        run: python3 scripts/check_fc2_corpus_seed.py
       - name: Explicit scope marker
         run: echo 'FC2_SEED_ONLY_PASS — FC2_GATE_HOLD — X402_LIVE_HOLD — PRODUCTION_HOLD'
