@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Synthetic only; exercises safety gates, not the unavailable 55-vector original."""
-import unittest,sys,signal,tempfile,pathlib,json,hashlib,hmac
+import unittest,sys,signal,tempfile,pathlib,json,hashlib,hmac,shlex
 from scripts.gate3_supervised_v06 import classify,verify_bundle
 def sha(b):return hashlib.sha256(b).hexdigest()
-def cmd(code):return sys.executable+" -c "+repr(code)
+def cmd(code):return shlex.quote(sys.executable)+" -c "+shlex.quote(code)
 class Controls(unittest.TestCase):
  def test_segfault(self):
   r=classify(cmd("import os,signal;os.kill(os.getpid(),signal.SIGSEGV)"),b"{}")
