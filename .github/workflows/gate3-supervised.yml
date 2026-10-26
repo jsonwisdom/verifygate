@@ -1,0 +1,26 @@
+name: Gate 3 supervised classifier and provenance controls
+on:
+  pull_request:
+    paths:
+      - 'scripts/gate3_supervised_v06.py'
+      - 'tests/test_gate3_supervised_v06.py'
+      - '.github/workflows/gate3-supervised.yml'
+  push:
+    branches: ['test/gate3-supervised-classifier-provenance-20261026']
+permissions:
+  contents: read
+jobs:
+  adversarial-controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Run synthetic crash and provenance negative controls only
+        run: |
+          ulimit -c 0
+          python3 -m unittest discover -s tests -p 'test_gate3_supervised_v06.py' -v
+          echo 'GATE3_SUPERVISOR_SYNTHETIC_TESTS_ONLY'
+          echo 'THREE_LIBRARY_CERTIFICATION=HOLD'
+          echo 'PRODUCTION_AUTHORITY=ZERO'
