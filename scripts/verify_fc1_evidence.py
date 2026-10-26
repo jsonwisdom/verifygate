@@ -22,7 +22,7 @@ def main():
         path = EVIDENCE / filename
         check(path.is_file(), f"missing {filename}")
         actual = hashlib.sha256(path.read_bytes()).hexdigest()
-        check(actual == expected, f"SHA-256 mismatch: {filename}")
+        check(actual == expected, f"SHA-256 mismatch: {filename}; expected={expected} actual={actual}")
         print(f"PINNED SHA-256 OK: {filename}")
     receipt = json.loads((EVIDENCE / "differential_receipt_patched.json").read_text(encoding="utf-8"))
     check(receipt.get("gate") == "PASS_FC1_SCOPE_ONLY", "gate field")
